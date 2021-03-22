@@ -76,8 +76,13 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53897QJ"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+    <script>
+      function cnsnt() {
+        gtag('consent', 'update', {'analytics_storage': 'granted', 'ad_storage': 'granted'});
+      }
+    </script>
+
     <a class="button link" href="/folder/page.html">Page 2</a>
-    <button class="button" onclick="function cnsnt() {gtag('consent', 'update', {'analytics_storage': 'granted', 'ad_storage': 'granted'});}">Opt In</button>
+    <button class="button" onclick="cnsnt()">Opt In</button>
   </body>
 </html>
