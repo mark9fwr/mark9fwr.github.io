@@ -5,6 +5,45 @@
     <meta charset="UTF-8">
     <script type="text/javascript">
       // create dataLayer
+      window.dL = window.dL || [];
+      function gtag() {
+          dL.push(arguments);
+      }
+  
+      // set Usercentrics developer_id    
+      // gtag("set", "developer_id.dY2M3M2", true); 
+  
+      // set „denied" as default for both ad and analytics storage,
+      gtag("consent", "default", {
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          wait_for_update: 2000 // milliseconds to wait for update
+      });
+  
+      // Enable ads data redaction by default [optional]
+      gtag("set", "ads_data_redaction", true);
+      
+      </script>
+  
+      <script type="text/javascript">
+      // Google Tag Manager
+      (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+              'gtm.start': new Date().getTime(),
+              event: 'gtm.js'
+          });
+          var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dL' ? '&l=' + l : '';
+          j.async = true;
+          j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dL', 'GTM-53897QJ');
+  </script>
+    <!--<script type="text/javascript">
+      // create dataLayer
       window.dataLayer = window.dataLayer || [];
       function gtag() {
           dataLayer.push(arguments);
@@ -26,16 +65,19 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PBTWVLZ');</script>
+    })(window,document,'script','dataLayer','GTM-PBTWVLZ');</script>-->
     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBTWVLZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBTWVLZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53897QJ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
     <a class="button link" href="/folder/page.html">Page 2</a>
+    <a class="button" onclick="function () {gtag('consent', 'update', {'analytics_storage': 'granted', 'ad_storage': 'denied'});}">Opt In</a>
   </body>
 </html>
